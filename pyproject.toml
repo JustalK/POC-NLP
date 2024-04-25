@@ -7,7 +7,15 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-spacy = "^3.7.4"
+spacy = "3.5.3"
+textacy = "^0.13.0"
+transformers = "^4.40.1"
+evaluate = "^0.4.1"
+datasets = "^2.19.0"
+ipython = "^8.23.0"
+pyspellchecker = "^0.8.1"
+spacy-wordnet = "^0.1.0"
+eng-spacysentiment = "^2.3.0"
 
 
 [build-system]
