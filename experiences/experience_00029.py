@@ -1,0 +1,6 @@
+from transformers import pipeline
+
+qa_model = pipeline(task="question-answering", model="deepset/tinyroberta-squad2")
+question = "When punk was created?"
+context = "Rock musicians in the mid-1960s began to advance the album ahead of the single as the dominant form of recorded music expression and consumption, with the Beatles at the forefront of this development. Their contributions lent the genre a cultural legitimacy in the mainstream and initiated a rock-informed album era in the music industry for the next several decades. By the late 1960s classic rock period, a number of distinct rock music subgenres had emerged, including hybrids like blues rock, folk rock, country rock, southern rock, raga rock, and jazz rock, which contributed to the development of psychedelic rock, influenced by the countercultural psychedelic and hippie scene. New genres that emerged included progressive rock with extended artistic elements, glam rock, highlighting showmanship and visual style. In the second half of the 1970s, punk rock reacted by producing stripped-down, energetic social and political critiques. Punk was an influence in the 1980s on new wave, post-punk and eventually alternative rock."
+print(qa_model(question = question, context = context))
