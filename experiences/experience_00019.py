@@ -1,4 +1,5 @@
 import spacy
+import math
 from spacy import displacy
 from collections import Counter
 from heapq import nlargest
@@ -15,31 +16,94 @@ keyword = []
 pos_tag = ['PROPN', 'ADJ', 'NOUN', 'VERB']
 for token in doc:
     if(not token.is_stop and not token.is_punct and token.pos_ in pos_tag):
-        keyword.append(token.text)
+        keyword.append(token.lemma_.lower())
 
 freq_word = Counter(keyword)
-most_common_word = freq_word.most_common(5)
+keys = freq_word.keys()
 
-print(most_common_word)
+# Number of term total in each sentance
+sum_key = {}
+for index, sent in enumerate(doc.sents):
+    sum_key[index] = 0
+    for word in sent:
+        if word.lemma_ in keys:
+            sum_key[index] += 1
 
-max_freq = most_common_word[0][1]
+# Number of reference of term t in each sentance
+n = {}
+for index, sent in enumerate(doc.sents):
+    n[index] = {}
+    for word in sent:
+        word_clean = word.lemma_.lower()
+        if word_clean in keys:
+            if word_clean in n[index].keys():
+                n[index][word_clean] += 1
+            else:
+                n[index][word_clean] = 1
 
-for word in freq_word.keys():
-    freq_word[word] = (freq_word[word]/max_freq)
+# Calcul of tf
+tf = {}
+for index, sent in enumerate(doc.sents):
+    tf[index] = {}
+    for word in n[index]:
+        tf[index][word] = n[index][word]/sum_key[index]
 
-print(freq_word.most_common(5))
+# Total sentance in corpus
+D = sum(1 for x in doc.sents)
+print(D)
+
+# For each key, number of sentence containing it 
+d = {}
+for key in keys:
+    d[key] = 0
+    for sent in doc.sents:
+        isIn = False
+        for word in sent:
+            word_clean = word.lemma_.lower()
+            if word_clean == key:
+                isIn = True
+                break
+        if isIn:
+            d[key] += 1
+
+# IDF
+idf = {}
+for key in keys:
+    idf[key] = math.log(D/d[key])
+
+# TF-IDF
+tfIdf = {}
+for index, sent in enumerate(tf):
+    tfIdf[index] = {}
+    for key in keys:
+        if key in tf[index] and key in idf:
+            tfIdf[index][key] = tf[index][key] * idf[key]
+
+most_common_word = freq_word.most_common(15)
+words = list()
+for word in most_common_word:
+    words.append(word[0])
 
 sent_strength={}
-for sent in doc.sents:
-    for word in sent:
-        if word.text in freq_word.keys():
-            if sent in sent_strength.keys():
-                sent_strength[sent]+=freq_word[word.text]
-            else:
-                sent_strength[sent]=freq_word[word.text]
+for index, sent in enumerate(doc.sents):
+    sent_strength[index] = 0
+    for weigth in tfIdf[index]:
+        print(weigth, words)
+        if weigth in words:
+            sent_strength[index] += tfIdf[index][weigth]
 
 print(sent_strength)
 print("=============================================")
-summarize_sentances = nlargest(3, sent_strength, key=sent_strength.get)
-print(summarize_sentances[0])
+
+word_targeted = most_common_word[2][0]
+print(word_targeted)
+
+sent_strength_by_key={}
+for index, sent in enumerate(doc.sents):
+    sent_strength_by_key[index] = 0
+    for key in tfIdf[index]:
+        if key == word_targeted:
+            sent_strength_by_key[index] += tfIdf[index][key]
+
+print(sent_strength_by_key)
 

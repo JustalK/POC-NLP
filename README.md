@@ -57,6 +57,12 @@ python -m spacy train config.cfg --output ./ --paths.train ./train.spacy --paths
 **Experience_00026**: Looking for synonyms from a certain WordNet domains
 **Experience_00027**: Spellcheck a text and correct it
 **Experience_00028**: Sentiment Analysis with Spacy (spacy 3.5 - 3.6)
+**Experience_00029**: Question-Answering with Hugging Face (squad model)
+
+#### Hugging Face
+
+**Experience_00030**: Understanding Attention Mask, Input IDs and Special Word [CLS] [SEP]
+
 
 **Experience_000XX**: Create a Trainer with Hugging Face
 
@@ -97,8 +103,33 @@ Attention is all you need!
 ## Tutorial
 
 - [Spacy Tutorial](https://kamalkhumar22.medium.com/)
+- [Spacy Advanced Course](https://course.spacy.io/en)
 - [Custom NER Pipeline](https://blog.futuresmart.ai/building-a-custom-ner-model-with-spacy-a-step-by-step-guide)
+- [Fine Tune Spacy Model](https://www.freecodecamp.org/news/how-to-fine-tune-spacy-for-nlp-use-cases/)
+- [Rules QA - Type](https://spotintelligence.com/2023/01/20/question-answering-qa-system-nlp/)
+
+## Explanation
+
+- [Positionl encoding](https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/)
+- [Self-Attention Calcul](https://sebastianraschka.com/blog/2023/self-attention-from-scratch.html)
+- [Self-Attention Explanation - Genius](https://medium.com/@geetkal67/attention-networks-a-simple-way-to-understand-self-attention-f5fb363c736d)
+- [Multi-Headed Attention](https://medium.com/@geetkal67/attention-networks-a-simple-way-to-understand-multi-head-attention-3bc3409c4312)
+- [Multi-Head Graph](https://towardsdatascience.com/transformers-explained-visually-part-3-multi-head-attention-deep-dive-1c1ff1024853)
+- [Multi-Head Attention - More details about Add + Norm](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial6/Transformers_and_MHAttention.html)
+- [Feed Forward](https://towardsdatascience.com/simplifying-transformers-state-of-the-art-nlp-using-words-you-understand-part-4-feed-foward-264bfee06d9)
+- [Feed Forward Calcul](https://medium.com/@hunter-j-phillips/position-wise-feed-forward-network-ffn-d4cc9e997b4c)
+- [Feed Forward Youtube Calcul](https://www.youtube.com/watch?v=4JKuyfejWTU)
+- [Feed Forward Neural Network](https://www.youtube.com/watch?v=bljuV9WDvAA)
+
+Deep Network -> Hidden Layer > 1
+
+- [Position-wise FFN - Explaination](https://www.youtube.com/watch?v=jTzJ9zjC8nU)
+- [Position-Wise FFN - Calcul](https://nlp.seas.harvard.edu/2018/04/01/attention.html)
 
 ## GIT
 
 - [Summarization](https://github.com/aniass/text-summarizer/blob/main/Text_summary.ipynb)
+
+## To Read
+
+- [50 NLP Questions](https://www.geeksforgeeks.org/nlp-interview-questions/)

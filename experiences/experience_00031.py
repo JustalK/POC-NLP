@@ -9,11 +9,3 @@ text = (
 summary = summarizer(text, max_length=130, min_length=30, length_penalty=2.0, num_beams=4)
 print("\nGenerated Summary with Bart:\n", summary[0]['summary_text'])
 
-summarizerGoogle = pipeline(task="summarization", model="google-t5/t5-small")
-
-summary = summarizerGoogle(text, max_length=130, min_length=30, length_penalty=2.0, num_beams=4)
-print("\nGenerated Summary with Google:\n", summary[0]['summary_text'])
-
-translator = pipeline(task="translation_en_to_fr", model="google-t5/t5-small")
-print("\nTranslation in french:\n",translator(text))
-
