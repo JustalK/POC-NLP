@@ -17,6 +17,7 @@ pyspellchecker = "^0.8.1"
 spacy-wordnet = "^0.1.0"
 eng-spacysentiment = "^2.3.0"
 torch = "^2.3.0"
+sentencepiece = "^0.2.0"
 
 
 [build-system]

@@ -62,6 +62,14 @@ python -m spacy train config.cfg --output ./ --paths.train ./train.spacy --paths
 #### Hugging Face
 
 **Experience_00030**: Understanding Attention Mask, Input IDs and Special Word [CLS] [SEP]
+**Experience_00031**: Summary with Hugging Face
+**Experience_00032**: Batching a dataset - chapter 3
+**Experience_00033**: Fine tune model (not enough memory) - chapter 3
+**Experience_00034**: Fine tune model for (not enough memory) - chapter 3
+Computer not enough ram for continuing on this chapter
+**Experience_00034**: Playing with model - chapter 4
+**Experience_00036**: Playing with dataset function - chapter 5
+**Experience_00037**: Creating a new cleaner dataset and save it - chapter 5
 
 
 **Experience_000XX**: Create a Trainer with Hugging Face
@@ -109,8 +117,13 @@ Attention is all you need!
 - [Rules QA - Type](https://spotintelligence.com/2023/01/20/question-answering-qa-system-nlp/)
 
 ## Explanation
-
-- [Positionl encoding](https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/)
+- [Tokenization](https://medium.com/@abdallahashraf90x/tokenization-in-nlp-all-you-need-to-know-45c00cfa2df7)
+- [Tokenization 2](https://towardsdatascience.com/word-subword-and-character-based-tokenization-know-the-difference-ea0976b64e17)
+- [Embedding layer](https://medium.com/@kunalmishra78/part-1-input-embeddings-and-positional-encodings-343fca6ecc2e)
+- [Transformer](https://datasciencedojo.com/blog/transformer-models/)
+- [Transformer - explanation](https://towardsdatascience.com/transformers-89034557de14)
+- [Positional encoding](https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/)
+- [Positional encoding - Calcul](https://medium.com/@hunter-j-phillips/positional-encoding-7a93db4109e6)
 - [Self-Attention Calcul](https://sebastianraschka.com/blog/2023/self-attention-from-scratch.html)
 - [Self-Attention Explanation - Genius](https://medium.com/@geetkal67/attention-networks-a-simple-way-to-understand-self-attention-f5fb363c736d)
 - [Multi-Headed Attention](https://medium.com/@geetkal67/attention-networks-a-simple-way-to-understand-multi-head-attention-3bc3409c4312)
