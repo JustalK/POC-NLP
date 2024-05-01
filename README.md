@@ -70,7 +70,11 @@ Computer not enough ram for continuing on this chapter
 **Experience_00034**: Playing with model - chapter 4
 **Experience_00036**: Playing with dataset function - chapter 5
 **Experience_00037**: Creating a new cleaner dataset and save it - chapter 5
-
+**Experience_00038**: Fecthing data and creating a dataset - chapter 5
+**Experience_00039**: Train a tokenizer - chapter 6
+**Experience_00040**: Fast tokenizer - chapter 6
+**Experience_00040**: Fast tokenizer with QA - chapter 6
+**Experience_00042**: Normalization and Pret-tokenization - chapter 6
 
 **Experience_000XX**: Create a Trainer with Hugging Face
 
