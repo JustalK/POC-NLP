@@ -1,28 +1,67 @@
-# POC-SPACY
+# POC-NLP
+
+## Goal
+
+This project is a POC on `Spacy` and `Hugging Face`. I have discovered the NLP recently and I wanted to understand how it works and what we can do with it.  
+So I read the documentation from start to end and made some experience with the library.  
+The project is made with `Python`.
+
+## Plan of the presentation
+
+I explain with all the details how I build the project and my way of working.
+
+- [Goal](#goal)
+- [Plan of the presentation](#plan-of-the-presentation)
+- [Running](#running)
+- [Experiences](#experiences)
+- [Documentation](#documentation)
+- [Links](#links)
+- [Helper](#helper)
+- [Tutorial](#tutorial)
+- [Explanation](#explanation)
+- [Git](#git)
+- [To Read](#to-read)
+- [System](#system)
+
+## Running
+
+In order to install the dependency, use poetry:
+
+```bash
+$ poetry install
+```
+
+PS: Some version of the dependencies might need to be play with in some experience in order to make it work.
+
+To run an experience, just go on the experiences project and use the following command:
+
+```bash
+$ python experience_00001.py
+```
 
 ## Experiences
 
-**Experience_00001**: Just testing if Spacy is installed properly
-**Experience_00002**: Playing with the matcher
-**Experience_00003**: Counting the number of sentance
-**Experience_00004**: Tokenization with custom tokenizer
-**Experience_00005**: Tokenization with custom prefixes and suffixes
-**Experience_00006**: Tokenization with custom infix
-**Experience_00007**: Stop words
-**Experience_00008**: Lemmatization (limit of it)
+- **Experience_00001**: Just testing if Spacy is installed properly
+- **Experience_00002**: Playing with the matcher
+- **Experience_00003**: Counting the number of sentance
+- **Experience_00004**: Tokenization with custom tokenizer
+- **Experience_00005**: Tokenization with custom prefixes and suffixes
+- **Experience_00006**: Tokenization with custom infix
+- **Experience_00007**: Stop words
+- **Experience_00008**: Lemmatization (limit of it)
 
 racination != lemmatization
 exemple:
 found => find (trouver)
 found => found (fonder)
 
-**Experience_00009**: Counting identical similar
-**Experience_00010**: Counting with lemmatization (error with sung)
-**Experience_00011**: Part-Of-Speech - PoS
-**Experience_00012**: DisplaCy - vizualization of POS
-**Experience_00013**: Preprocessing function (lower-lemma-remove is_punct and is_stop)
-**Experience_00014**: Using matcher for searching based on PoS
-**Experience_00015**: Dependency parsing
+- **Experience_00009**: Counting identical similar
+- **Experience_00010**: Counting with lemmatization (error with sung)
+- **Experience_00011**: Part-Of-Speech - PoS
+- **Experience_00012**: DisplaCy - vizualization of POS
+- **Experience_00013**: Preprocessing function (lower-lemma-remove is_punct and is_stop)
+- **Experience_00014**: Using matcher for searching based on PoS
+- **Experience_00015**: Dependency parsing
 
 Root of the sentance
 headwords and dependents
@@ -30,16 +69,16 @@ headwords and dependents
 words = nodes
 Gramatical relationships = edges
 
-**Experience_00016**: Subtree navigation
-**Experience_00017**: Shallow parsing (noun_chuck)
-**Experience_00018**: NER (Name entity recognition)
-**Experience_00019**: Summarization (Extrative Summarization)
-**Experience_00020**: Summarization (Abstractive Summarization) using Hugging Face Transformers
-**Experience_00021**: Tokenization with Hugging Face
-**Experience_00022**: Sentiment Analyzis with Hugging Face
-**Experience_00023**: TF-IDF
-**Experience_00024**: Pipeline Spacy
-**Experience_00025**: Training NER pipeline using Kaggle medical dataset 
+- **Experience_00016**: Subtree navigation
+- **Experience_00017**: Shallow parsing (noun_chuck)
+- **Experience_00018**: NER (Name entity recognition)
+- **Experience_00019**: Summarization (Extrative Summarization)
+- **Experience_00020**: Summarization (Abstractive Summarization) using Hugging Face Transformers
+- **Experience_00021**: Tokenization with Hugging Face
+- **Experience_00022**: Sentiment Analyzis with Hugging Face
+- **Experience_00023**: TF-IDF
+- **Experience_00024**: Pipeline Spacy
+- **Experience_00025**: Training NER pipeline using Kaggle medical dataset 
 
 Use the processData.py to create a document in the right spacy format
 
@@ -54,30 +93,28 @@ python -m spacy train config.cfg --output ./ --paths.train ./train.spacy --paths
 
 ![4](./documentation/images/4.png)
 
-**Experience_00026**: Looking for synonyms from a certain WordNet domains
-**Experience_00027**: Spellcheck a text and correct it
-**Experience_00028**: Sentiment Analysis with Spacy (spacy 3.5 - 3.6)
-**Experience_00029**: Question-Answering with Hugging Face (squad model)
+- **Experience_00026**: Looking for synonyms from a certain WordNet domains
+- **Experience_00027**: Spellcheck a text and correct it
+- **Experience_00028**: Sentiment Analysis with Spacy (spacy 3.5 - 3.6)
+- **Experience_00029**: Question-Answering with Hugging Face (squad model)
 
 #### Hugging Face
 
-**Experience_00030**: Understanding Attention Mask, Input IDs and Special Word [CLS] [SEP]
-**Experience_00031**: Summary with Hugging Face
-**Experience_00032**: Batching a dataset - chapter 3
-**Experience_00033**: Fine tune model (not enough memory) - chapter 3
-**Experience_00034**: Fine tune model for (not enough memory) - chapter 3
+- **Experience_00030**: Understanding Attention Mask, Input IDs and Special Word [CLS] [SEP]
+- **Experience_00031**: Summary with Hugging Face
+- **Experience_00032**: Batching a dataset - chapter 3
+- **Experience_00033**: Fine tune model (not enough memory) - chapter 3
+- **Experience_00034**: Fine tune model for (not enough memory) - chapter 3
 Computer not enough ram for continuing on this chapter
-**Experience_00034**: Playing with model - chapter 4
-**Experience_00036**: Playing with dataset function - chapter 5
-**Experience_00037**: Creating a new cleaner dataset and save it - chapter 5
-**Experience_00038**: Fecthing data and creating a dataset - chapter 5
-**Experience_00039**: Train a tokenizer - chapter 6
-**Experience_00040**: Fast tokenizer - chapter 6
-**Experience_00040**: Fast tokenizer with QA - chapter 6
-**Experience_00042**: Normalization and Pret-tokenization - chapter 6
-
-**Experience_000XX**: Create a Trainer with Hugging Face
-
+- **Experience_00034**: Playing with model - chapter 4
+- **Experience_00036**: Playing with dataset function - chapter 5
+- **Experience_00037**: Creating a new cleaner dataset and save it - chapter 5
+- **Experience_00038**: Fecthing data and creating a dataset - chapter 5
+- **Experience_00039**: Train a tokenizer - chapter 6
+- **Experience_00040**: Fast tokenizer - chapter 6
+- **Experience_00040**: Fast tokenizer with QA - chapter 6
+- **Experience_00042**: Normalization and Pret-tokenization - chapter 6
+- **Experience_00043**: Fine Tuning a model for NER - chapter 6
 
 
 ## Documentation
@@ -150,3 +187,22 @@ Deep Network -> Hidden Layer > 1
 ## To Read
 
 - [50 NLP Questions](https://www.geeksforgeeks.org/nlp-interview-questions/)
+
+## System
+
+Ubuntu Version: Ubuntu 20.04.1
+Node Version: v20.12.2
+Npm Version: v10.5.2
+
+The version are manage with [Volta](https://docs.volta.sh/guide/getting-started).
+
+```bash
+# Get the latest version of ubuntu
+$ lsb_release -a
+
+# Get the version of node
+$ node -v
+
+# Get the version of npm
+$ npm -v
+```

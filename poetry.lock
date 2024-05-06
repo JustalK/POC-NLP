@@ -2493,6 +2493,20 @@ files = [
 ]
 
 [[package]]
+name = "seqeval"
+version = "1.2.2"
+description = "Testing framework for sequence labeling"
+optional = false
+python-versions = "*"
+files = [
+    {file = "seqeval-1.2.2.tar.gz", hash = "sha256:f28e97c3ab96d6fcd32b648f6438ff2e09cfba87f05939da9b3970713ec56e6f"},
+]
+
+[package.dependencies]
+numpy = ">=1.14.0"
+scikit-learn = ">=0.21.3"
+
+[[package]]
 name = "setuptools"
 version = "69.5.1"
 description = "Easily download, build, install, upgrade, and uninstall Python packages"
@@ -3492,4 +3506,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "4269dfe0a1b5791c5f6df555b1e5437125f8b89ebe1cd0fec5a6926bc306c648"
+content-hash = "ca193dadb7379853a6722744fadcb8d0476b2f5bad66187956acc16cf1a0bec5"
